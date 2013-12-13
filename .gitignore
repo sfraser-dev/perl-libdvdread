@@ -1,0 +1,4 @@
+*.a
+*.exe
+libdvdread-4.2.0/
+test/
