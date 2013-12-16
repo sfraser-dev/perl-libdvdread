@@ -32,5 +32,17 @@ close(fhin);
 
 say"Number of titles is: $noOfTitles";
 say"folder=$dvdfolder";
+my $theStr;
+my $theNum;
 #system("mplayer -dvd-device $dvdfolder dvd://1");
-system("mplayer -dvd-device $dvdfolder dvd://3 -dumpstream -dumpfile ./3.VOB");
+for(my $i=1; $i<=$noOfTitles; $i++){
+    if ($noOfTitles < 1000) {
+        $theNum=sprintf("%03d",$i);
+    }
+    else {
+        die "Error: wrong number format for theNum\n";
+    }
+    $theStr="mplayer -dvd-device ".$dvdfolder." dvd:\/\/".$i." -dumpstream -dumpfile ./VTS_".$theNum."_1.VOB";
+    say"$theStr";
+    #system($theStr);
+}

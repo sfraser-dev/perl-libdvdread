@@ -15,7 +15,8 @@ int main() {
     ifo_handle_t *ifo_p;
 
     //dvd_p = DVDOpen("/home/stewart/dev/libdvdread/test/dvdflick4_1_to_1_smallSample/dvd/VIDEO_TS/");
-    dvd_p = DVDOpen("/home/stewart/dev/libdvdread/test/dvdflick4_1_to_3_smallSample/dvd/VIDEO_TS/");
+    //dvd_p = DVDOpen("/home/stewart/dev/libdvdread/test/dvdflick4_1_to_3_smallSample/dvd/VIDEO_TS/");
+    dvd_p = DVDOpen("/home/stewart/dev/libdvdread/OTSL_DVD_orig/VIDEO_TS/");
     ifo_p = ifoOpen(dvd_p,0);
 
     //ifoRead_PGCI_UT(ifo_p);
