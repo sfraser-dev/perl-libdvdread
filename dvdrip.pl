@@ -1,4 +1,6 @@
 #!/usr/bin/perl
+# Example usage:
+# dvdrip.pl -i [.IFO file in VIDEO_TS dir] -f [VIDEO_TS dir]
 use strict;
 use warnings;
 use feature qw(say);
@@ -44,5 +46,5 @@ for(my $i=1; $i<=$noOfTitles; $i++){
     }
     $theStr="mplayer -dvd-device ".$dvdfolder." dvd:\/\/".$i." -dumpstream -dumpfile ./VTS_".$theNum."_1.VOB";
     say"$theStr";
-    #system($theStr);
+    system($theStr);
 }
